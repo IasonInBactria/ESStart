@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/ssm_db?useUnicode=true&
+        characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&useSSL=false
+      username: root
+      password: '0205006'
+  devtools:
+    restart:
+      exclude: static/**, public/**, config/application.yml
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
